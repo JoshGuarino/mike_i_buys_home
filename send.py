@@ -40,7 +40,7 @@ def main():
 
     #extracting data from csv file
     records = []
-    with open('Deal Machines Export Template.csv') as f:
+    with open(config['file_name']) as f:
         csv_first_row = f.readline()
         csv_col_names = csv_first_row.split(',')
 
