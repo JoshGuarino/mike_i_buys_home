@@ -5,7 +5,7 @@ import csv
 import progressbar
 
 
-# Code for sending email using sendgrid.
+# Function for sending email using sendgrid.
 def send_email(name, address, email, sendgrid_client, config):
 
     # Load email body from cnfig and format with proper vars.
@@ -31,7 +31,7 @@ def send_email(name, address, email, sendgrid_client, config):
 
 
 
-# Main fucntion entry point.
+# Main function entry point.
 def main():
     #load config for apikey and iniate apiclient.
     with open('config.yaml') as f:
