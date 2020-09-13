@@ -3,9 +3,6 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import csv
 import progressbar
-import time
-from pprint import pprint
-
 
 
 # Code for sending email using sendgrid.
