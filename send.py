@@ -3,6 +3,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import csv
 import progressbar
+from pprint import pprint
 
 
 # Function for sending email using sendgrid.
@@ -67,7 +68,11 @@ def main():
         for email in record['emails']:
             send_email(record['name'], record['address'], email, sendgrid_client, config)
             email_count += 1
-    print(f'{email_count} emails sent out.')
+        if email_count == 100:
+            print('\n\nDaily limit reached, stopped at record:\n')
+            pprint(record)
+            break
+    print(f'\n{email_count} emails sent out.\n')
 
 
 
